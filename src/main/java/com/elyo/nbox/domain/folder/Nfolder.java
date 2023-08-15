@@ -1,5 +1,6 @@
-package com.elyo.nbox.domain;
+package com.elyo.nbox.domain.folder;
 
+import com.elyo.nbox.domain.BaseEntity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.elyo.nbox.domain;
+package com.elyo.nbox.domain.account;
 
 public enum AccountType {
 

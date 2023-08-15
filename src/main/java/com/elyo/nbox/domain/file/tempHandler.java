@@ -1,4 +1,4 @@
-package com.elyo.nbox.domain;
+package com.elyo.nbox.domain.file;
 
 public class tempHandler {
 }
