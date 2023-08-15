@@ -1,7 +1,7 @@
-package com.elyo.nbox.file.service;
+package com.elyo.nbox.upndownload.service;
 
 
-import com.elyo.nbox.domain.IUpload;
+import com.elyo.nbox.domain.dataObj.IUpload;
 import com.elyo.nbox.file.controller.dto.FileResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

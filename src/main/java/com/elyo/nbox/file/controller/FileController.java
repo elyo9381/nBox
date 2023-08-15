@@ -1,32 +1,37 @@
 package com.elyo.nbox.file.controller;
 
 import com.elyo.nbox.file.controller.dto.FileResponse;
-import com.elyo.nbox.file.service.DefaultFileDownloadService;
-import com.elyo.nbox.file.service.DefaultFileUploadService;
+import com.elyo.nbox.file.service.FileService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/v1")
 @RequiredArgsConstructor
 public class FileController {
 
-    private final DefaultFileUploadService uploadService;
-    private final DefaultFileDownloadService downloadService;
+    private final FileService fileService;
 
-    @PostMapping("upload")
-    public FileResponse upload(MultipartHttpServletRequest request) throws IOException {
-        return uploadService.upload(request);
+    @PostMapping("/folders")
+    public FileResponse create() throws IOException {
+        return fileService.create();
     }
-    @PostMapping("down")
-    public ResponseEntity<ByteArrayResource> down() throws IOException {
-        return downloadService.download();
+
+    @GetMapping("/folders")
+    public FileResponse list() throws IOException {
+        return fileService.getList();
     }
+
+    @PutMapping("/folders/")
+    public FileResponse update() throws IOException {
+        return fileService.update();
+    }
+
+    @DeleteMapping("/folders")
+    public FileResponse delete() throws IOException {
+        return fileService.delete();
+    }
+
 }

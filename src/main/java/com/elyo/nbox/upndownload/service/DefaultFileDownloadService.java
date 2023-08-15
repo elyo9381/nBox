@@ -1,9 +1,7 @@
-package com.elyo.nbox.file.service;
+package com.elyo.nbox.upndownload.service;
 
 
-import com.elyo.nbox.domain.IDownload;
-import com.elyo.nbox.domain.IUpload;
-import com.elyo.nbox.file.controller.dto.FileResponse;
+import com.elyo.nbox.domain.dataObj.IDownload;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
@@ -13,14 +11,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 @Service
 @Slf4j
