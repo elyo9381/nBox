@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 
 @Service
 @Slf4j
-public class DefaultFileDownloadService implements IDownload {
+public class LocalDownloadService implements IDownload {
 
     @Value("${HOME}")
     private String homeDirectory;

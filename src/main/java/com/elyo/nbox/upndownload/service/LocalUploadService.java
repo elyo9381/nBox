@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class DefaultFileUploadService implements IUpload {
+public class LocalUploadService implements IUpload {
 
     @Value("${HOME}")
     private String homeDirectory;

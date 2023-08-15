@@ -1,8 +1,8 @@
 package com.elyo.nbox.upndownload.controller;
 
 import com.elyo.nbox.file.controller.dto.FileResponse;
-import com.elyo.nbox.upndownload.service.DefaultFileDownloadService;
-import com.elyo.nbox.upndownload.service.DefaultFileUploadService;
+import com.elyo.nbox.upndownload.service.LocalDownloadService;
+import com.elyo.nbox.upndownload.service.LocalUploadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +18,8 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class UpNDownLoadController {
 
-    private final DefaultFileUploadService uploadService;
-    private final DefaultFileDownloadService downloadService;
+    private final LocalUploadService uploadService;
+    private final LocalDownloadService downloadService;
 
     @PostMapping("upload")
     public FileResponse upload(MultipartHttpServletRequest request) throws IOException {
